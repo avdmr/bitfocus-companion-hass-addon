@@ -1,3 +1,6 @@
+## 0.2.5
+Updated Companion docker image to v4.1.4
+
 ## 0.2.4
 Updated Companion docker image to v4.1.3
 
