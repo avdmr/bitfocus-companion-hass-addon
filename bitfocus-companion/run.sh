@@ -1,32 +1,29 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
-# Maak de data directory aan in Home Assistant data map
 DATA_DIR="/data/companion"
-mkdir -p ${DATA_DIR}
-chown -R companion:companion ${DATA_DIR}
 
-# Maak een symlink van /companion naar de data directory als dat nodig is
-if [ ! -L "/companion" ]; then
-  # Als /companion al bestaat, verplaats de inhoud naar de data directory
-  if [ -d "/companion" ] && [ "$(ls -A /companion)" ]; then
-    cp -a /companion/. ${DATA_DIR}/
-    rm -rf /companion
-  else
-    rm -rf /companion
-  fi
-  
-  # Maak de symlink
-  ln -sf ${DATA_DIR} /companion
+mkdir -p "$DATA_DIR"
+chown -R companion:companion "$DATA_DIR"
+
+# resolve target 
+CURRENT_TARGET=""
+if [ -e /companion ] || [ -L /companion ]; then
+  CURRENT_TARGET="$(readlink -f /companion || true)"
 fi
 
-# Zorg ervoor dat de companion gebruiker eigenaar is
+# If /companion is not a symlink to DATA_DIR: migrate + force
+if [ "$CURRENT_TARGET" != "$DATA_DIR" ]; then
+  if [ -d /companion ] && [ ! -L /companion ] && [ "$(ls -A /companion 2>/dev/null || true)" ]; then
+    cp -a /companion/. "$DATA_DIR"/ || true
+  fi
+
+  rm -rf /companion
+  ln -s "$DATA_DIR" /companion
+fi
+
 chown -R companion:companion /companion
 
-# Start Companion via het standaard entrypoint met de juiste parameters
-#old :exec /docker-entrypoint.sh ./node-runtimes/main/bin/node ./main.js --admin-address 0.0.0.0 --admin-port 8000 --config-dir $COMPANION_CONFIG_BASEDIR --extra-module-path /app/module-local-dev
+export COMPANION_CONFIG_BASEDIR="$DATA_DIR"
 
-export COMPANION_CONFIG_BASEDIR="/companion"
-
-# Start new
 exec /docker-entrypoint.sh
