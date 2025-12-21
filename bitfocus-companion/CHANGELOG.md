@@ -1,5 +1,5 @@
 
-## 0.2.5
+## 0.2.6
 Updated Companion docker image to v4.2.1
 
 ## 0.2.5
