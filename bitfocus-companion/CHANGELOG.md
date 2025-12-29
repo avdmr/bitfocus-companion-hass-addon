@@ -1,3 +1,6 @@
+## 0.2.8
+Updated Companion docker image to v4.2.2
+
 ## 0.2.7
 Bugfix: reworked add-on startup to prevent Node.js permission errors in Companion modules
 - /data/companion is now used as the actual config base directory:
