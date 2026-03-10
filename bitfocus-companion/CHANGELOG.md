@@ -1,4 +1,4 @@
-## 0.2.9
+## 0.3.0
 Updated Companion docker image to v4.2.5
 Added custom UDP and TCP listeners:
 - 12321/udp: "OSC Listener"
