@@ -1,4 +1,4 @@
-name: "Bitfocus Companion-dev"
+name: "Bitfocus Companion"
 description: "Bitfocus Companion for Home Assistant"
 version: "0.3.0"
 slug: "bitfocus_companion"
@@ -41,6 +41,7 @@ ports_description:
 usb: true
 build_args:
   BUILD_ARCH: '|arch|'
+
 
 
 
