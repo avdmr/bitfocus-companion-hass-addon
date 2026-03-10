@@ -1,6 +1,6 @@
-name: "Bitfocus Companion"
+name: "Bitfocus Companion-dev"
 description: "Bitfocus Companion for Home Assistant"
-version: "0.2.9"
+version: "0.3.0"
 slug: "bitfocus_companion"
 init: false
 arch:
@@ -8,6 +8,7 @@ arch:
   - amd64
 startup: application
 boot: auto
+#host_network: true
 webui: "http://[HOST]:[PORT:8000]/"
 panel_icon: "mdi:remote"
 map:
@@ -18,14 +19,41 @@ ports:
   16622/tcp: 16622
   16623/tcp: 16623
   28492/tcp: 28492
+  12321/udp: 12321
+  7788/tcp: 7788
+  9092/tcp: 9092
+  16759/tcp: 16759  
+  16759/udp: 16759    
+  6454/udp: 6454
+  9990/tcp: 9990
 ports_description:
-  8000/tcp: "Web interface"
+  38000/tcp: "Web interface"
   16622/tcp: "Satellite API"
   16623/tcp: "WebSocket (Elgato Plugin)"
-  28492/tcp: "Additional port"
+  28492/tcp: "HTTP API"
+  16759/tcp: "Companion TCP Listener"
+  16759/udp: "Companion UDP Listener"
+  12321/udp: "OSC Listener"
+  7788/tcp: "RossTalk Listener"
+  9092/tcp: "Ember+ Listener"
+  6454/udp: "Art-Net / Art-Net II"
+  9990/tcp: "Videohub Panel Listener"  
 usb: true
 build_args:
   BUILD_ARCH: '|arch|'
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
