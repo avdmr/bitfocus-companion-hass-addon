@@ -1,11 +1,11 @@
 ## 0.3.0
-Updated Companion docker image to v4.2.5
-Added custom UDP and TCP listeners:
-- 12321/udp: "OSC Listener"
-- 7788/tcp: "RossTalk Listener"
-- 9092/tcp: "Ember+ Listener"
-- 6454/udp: "Art-Net / Art-Net II"
-- 9990/tcp: "Videohub Panel Listener"  
+- Updated Companion docker image to v4.2.5
+- Added custom UDP and TCP listeners:
+  - 12321/udp: "OSC Listener"
+  - 7788/tcp: "RossTalk Listener"
+  - 9092/tcp: "Ember+ Listener"
+  - 6454/udp: "Art-Net / Art-Net II"
+  - 9990/tcp: "Videohub Panel Listener"  
 
 ## 0.2.9
 Updated Companion docker image to v4.2.4
