@@ -1,3 +1,6 @@
+## 0.3.1
+Updated Companion docker image to v4.3.4
+
 ## 0.3.0
 - Updated Companion docker image to v4.2.5
 - Added custom UDP and TCP listeners:
