@@ -41,6 +41,7 @@ To work around this issue:
 
 
 **Want to add your companion buttons to home assitant?**
+
 Check out Bitfocus Companion Bridge, a custom Home Assistant integration that imports Bitfocus Companion page exports as Home Assistant entities.
 
 It can automatically create button, switch, and sensor entities from your exported Companion pages, allowing you to use your Companion buttons in Home Assistant automations.
