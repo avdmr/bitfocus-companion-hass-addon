@@ -1,3 +1,12 @@
+## 0.3.2
+Updated Companion docker image to v5.0.2
+
+Created: Bitfocus Companion Bridge
+A custom Home Assistant integration for importing Bitfocus Companion page exports as Home Assistant entities. This integration can automatically create Home Assistant button, switch, and sensor entities from exported Companion pages. A config flow guides you through the setup process and allows Companion buttons and sensor states to be used in Home Assistant automations.
+You can find it here: https://github.com/avdmr/Bitfocus-Companion-HA-Bridge/tree/main
+
+
+
 ## 0.3.1
 Updated Companion docker image to v4.3.4
 
