@@ -1,4 +1,4 @@
-**Host Bitfocus Companion on your Pi/Odroid/HassOS as a Home Assistant Add-on**
+**Host Bitfocus Companion on your Pi/Odroid/HassOS as a Home Assistant Add-on/App**
 
 This setup allows you to run Companion directly within Home Assistant. It integrates smoothly with the Stream Deck Companion plugin and is likely compatible with Companion Satellite as well.
 
@@ -6,7 +6,7 @@ This setup allows you to run Companion directly within Home Assistant. It integr
 
     Open Home Assistant.
 
-    Go to Add-ons.
+    Go to Add-ons or Apps.
 
     Click the button to add a new repository.
 
