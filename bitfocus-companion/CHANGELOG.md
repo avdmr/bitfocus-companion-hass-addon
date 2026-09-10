@@ -1,4 +1,7 @@
 
+## 0.3.5
+Updated Companion docker image to v5.0.5
+
 ## 0.3.4
 Updated Companion docker image to v5.0.4
 
